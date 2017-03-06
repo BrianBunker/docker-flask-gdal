@@ -9,7 +9,7 @@ Build the docker image with `docker build -t docker-flask-gdal .`.
 
 Upon build the necessary libraries and landsat images will be downloaded to the docker image.
 
-Run the docker image from within the docker-flask-gdal folder with `docker run -d=False -t -p 80:80 -v $(pwd)/app:/app docker-flask-gdal /bin/bash -c "cd app; python main.py"`.
+Run the docker image from within the docker-flask-gdal folder with `docker run -d=False -t -p 80:80 /bin/bash -c "cd app; python main.py"`.
 
 Once running, the container is exposed to `0.0.0.0`. Access the implemented vegetation indexes using `0.0.0.0/?index=<index>`. For example, to calculate and download the NDVI of the landsat scene, use `0.0.0.0/?index=ndvi`.
 
